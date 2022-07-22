@@ -4,7 +4,7 @@ Variable naming convention: <object>_<action>_<objectname>; Example -> Button_cl
 */
 
 //Variables (BE CAREFUL THESE MIGHT BE USED IN OTHER JS FILES TOO)
-var inp_as=document.getElementById('a_size'),array_size=inp_as.value;
+var inp_as=document.getElementById('a_size'),array_size=inp_as.value;  
 var inp_gen=document.getElementById("a_generate");
 var inp_aspeed=document.getElementById("a_speed");
 //var array_speed=document.getElementById('a_speed').value;
@@ -31,8 +31,8 @@ function generate_array()
         div_sizes[i]=Math.floor(Math.random() * 0.5*(inp_as.max - inp_as.min) ) + 10;
         divs[i]=document.createElement("div");
         cont.appendChild(divs[i]);
-        margin_size=0.1;
-        divs[i].style=" margin:0% " + margin_size + "%; background-color:blue; width:" + (100/array_size-(2*margin_size)) + "%; height:" + (div_sizes[i]) + "%;";
+        margin_size=0.1;//gap between two bars
+        divs[i].style=" margin:0% " + margin_size + "%; background-color:yellow; width:" + (100/array_size-(2*margin_size)) + "%; height:" + (div_sizes[i]) + "%;";
     }
 }
 
